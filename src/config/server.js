@@ -117,7 +117,7 @@ Firebird.attach(options, async function (err, db) {
 
 
   setInterval(async () => {
-    if (moment().hour() > 0 && moment().hour() < 23) {
+    if (moment().hour() > 0 && moment().hour() < 20) {
       checkProdutosDiario(err, db)
     }
   }, 9200)
@@ -180,7 +180,7 @@ Firebird.attach(options, async function (err, db) {
 
 
   setInterval(() => {
-    if (moment().hour() > 0 && moment().hour() < 21) {
+    if (moment().hour() > 0 && moment().hour() < 20) {
       console.log('sair exit', moment().hour())
       process.exit(1)
     }
