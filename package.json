@@ -1,0 +1,35 @@
+{
+  "name": "kazadeccor-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/loader.js",
+  "scripts": {
+    "dev": "nodemon",
+    "test": "node src/loader.js",
+    "start": "pm2 start src/loader.js --name kazadeccor-services"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "bcrypt": "^3.0.7",
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.5",
+    "express": "^4.14.0",
+    "express-query-int": "^1.0.1",
+    "formidable": "^1.2.1",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.4",
+    "moment": "^2.24.0",
+    "mongoose": "^5.6.11",
+    "mongoose-paginate": "^5.0.3",
+    "mongoose-sequence": "^5.2.2",
+    "node-firebird": "0.8.9",
+    "node-restful": "^0.2.5",
+    "pm2": "^2.1.5"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
