@@ -71,7 +71,7 @@ function checkProdutosDiario(erro, db) {
     where 
     w.familia = y.codigo 
     and (w.inativo = 'N')
-    and w.ULTMODIF_APP > '${moment().subtract(60, 'minutes').format('DD.MM.YYYY HH:mm:ss.SSS')}';
+    and w.ULTMODIF_APP > '${moment().subtract(180, 'minutes').format('DD.MM.YYYY HH:mm:ss.SSS')}';
     --and w.codigo = '990875';
     `, async function (err, result) {
 

@@ -61,7 +61,7 @@ function checkPedidosDaily(erro, db) {
 
         if (!err) {
           if (result.length > 0) {
-            console.log('Quantidade de dados da query (pedidos daily): ' + result.length)
+            //console.log('Quantidade de dados da query (pedidos daily): ' + result.length)
 
             let prevPed = ' '
             let statusprom = false
