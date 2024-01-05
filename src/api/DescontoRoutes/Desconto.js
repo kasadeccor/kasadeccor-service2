@@ -11,6 +11,7 @@ const descontoSchema = new mongoose.Schema({
     VENDEDOR: { type: String,  },
     CONDICAO_PAGAMENTO: { type: String,  },
     TIPO_PAGAMENTO: { type: String,  },
+    OBS_PED: { type: String,  },
     HORA_EDICAO: { type: String, required: true },
     DATA_EDICAO: { type: Date, required: true },
     STATUS: { type: Number, Default: 0},

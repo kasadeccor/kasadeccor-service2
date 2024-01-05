@@ -40,7 +40,7 @@ function checkPedidosDaily(erro, db) {
 
     if (erro == undefined && db) {
       db.query(`
-   select p.ralped as PEDIDO, t.nome_cli as NOME_CLIENTE, p.nr_item_estoq as CODPRODUTO, t.SITUACAO,
+   select p.ralped as PEDIDO, t.OBS_PED , t.nome_cli as NOME_CLIENTE, p.nr_item_estoq as CODPRODUTO, t.SITUACAO,
    p.descricao_original as DESCRICAO, p.qtd as QUANTIDADE, p.custo as CUSTO,
    p.preco as TOTAL_PROD_LIQUIDO, cast (p.qtd * p.valorv as double precision) as TOTAL_PROD_BRUTO,
    p.preco_unitario as PRECO_VENDA, p.valorv as PRECO_UNITARIO, p.preco_unitario_or as PRECO_UNITARIO_ORIGINAL, p.desconto as DESCONTO_ITEM, p.perc_desconto as DESC_PERC_ITEM,
@@ -86,6 +86,7 @@ function checkPedidosDaily(erro, db) {
                 desc.TIPO_PAGAMENTO = result[i].TIPO_PAGAMENTO
                 desc.HORA_EDICAO = result[i].HORA_EDICAO
                 desc.DATA_EDICAO = result[i].DATA_EDICAO
+                desc.OBS_PED = result[i].OBS_PED
                 desc.STATUS = 0
 
                 if (result[i].SITUACAO == 'PD') {
@@ -212,6 +213,7 @@ function checkPedidosDaily(erro, db) {
                 desc.TIPO_PAGAMENTO = result[i].TIPO_PAGAMENTO
                 desc.HORA_EDICAO = result[i].HORA_EDICAO
                 desc.DATA_EDICAO = result[i].DATA_EDICAO
+                desc.OBS_PED = result[i].OBS_PED
                 desc.STATUS = 0
                 desc.STATUS_PROMOCAO = statusprom
 
